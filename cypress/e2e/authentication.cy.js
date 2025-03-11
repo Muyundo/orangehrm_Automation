@@ -1,10 +1,8 @@
 /// <reference types = "cypress"/>
 beforeEach(() =>{
-cy.baseurl()
+cy.visit('https://opensource-demo.orangehrmlive.com/')
 
 })
-
-//describe('login', ()=>{
 it('Login page', () => {
     cy.url().should('include', '/auth/login')
 })
@@ -40,7 +38,3 @@ it('login using Incorrect username and correct password', () =>{
 
     })    
 
-
-
-
-//})
