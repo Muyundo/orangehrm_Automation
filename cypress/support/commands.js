@@ -33,3 +33,8 @@ Cypress.Commands.add('login', () =>{
         cy.get('.oxd-button').contains('Login').click()
    
 })
+
+Cypress.Commands.add("RandomNumber", () => {
+    const randomNumber = Math.floor(100000 + Math.random() * 900000)
+    return randomNumber
+})
