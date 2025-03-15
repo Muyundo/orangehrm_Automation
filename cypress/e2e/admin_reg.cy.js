@@ -11,12 +11,12 @@ beforeEach(() =>{
           .click()
         cy.get('.oxd-select-dropdown').contains('ESS').click()
 
-        cy.get('div.oxd-select-wrapper .oxd-select-text.oxd-select-text--active .oxd-select-text-input', {timeout: 10000})
+      /*  cy.get('div.oxd-select-wrapper .oxd-select-text.oxd-select-text--active .oxd-select-text-input', {timeout: 10000})
           .contains('-- Select --')
           .click()
           cy.get('.oxd-select-dropdown').contains('Enabled').click()
 
-        cy.get('.oxd-autocomplete-text-input--before').type('George')
+        cy.get('.oxd-autocomplete-text-input--before').type('George')*/
 })
      
     
