@@ -15,6 +15,9 @@ jobs:
         run: npm ci
       - name: run and record tests
         uses: cypress-io/github-action@v6
+        with:
+          record: true
+          parallel: false
 
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
