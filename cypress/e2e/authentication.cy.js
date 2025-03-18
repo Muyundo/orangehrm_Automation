@@ -3,7 +3,7 @@ beforeEach(() =>{
 cy.visit('https://opensource-demo.orangehrmlive.com/')
 
 })
-it('Login page', () => {
+it('Load login page', () => {
     cy.url().should('include', '/auth/login')
 })
 
