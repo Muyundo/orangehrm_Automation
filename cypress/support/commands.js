@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('baseurl', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/')
+
 })
 
 Cypress.Commands.add('login', () =>{
@@ -34,7 +35,4 @@ Cypress.Commands.add('login', () =>{
    
 })
 
-Cypress.Commands.add("RandomNumber", () => {
-    const randomNumber = Math.floor(100000 + Math.random() * 900000)
-    return randomNumber
-})
+   
