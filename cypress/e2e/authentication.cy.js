@@ -37,4 +37,3 @@ it('login using Incorrect username and correct password', () =>{
         cy.url().should('include', '/dashboard/index')
 
     })    
-
