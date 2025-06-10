@@ -4,7 +4,7 @@ beforeEach(() =>{
     cy.login()
     
     })
-    it('Add new user', () => {
+    it('Add new user to the interface', () => {
         cy.get('.oxd-navbar-nav').contains('Admin').click()
         cy.get('.orangehrm-header-container > .oxd-button').click()
         cy.get('div.oxd-select-wrapper .oxd-select-text.oxd-select-text--active').contains('-- Select --')
