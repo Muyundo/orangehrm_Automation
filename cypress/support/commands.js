@@ -5,9 +5,13 @@ Cypress.Commands.add('baseurl', () => {
 })
 
 Cypress.Commands.add('login', () =>{
-        cy.get('input[name = "username"]').type('Admin')
-        cy.get('input[name = password]').type('admin123')
-        cy.get('.oxd-button').contains('Login').click()
+        cy.get('input[name = "username"]', {timeout: 10000})
+          .type('Admin')
+        cy.get('input[name = password]', {timeout: 10000})
+          .type('admin123')
+        cy.get('.oxd-button').contains('Login')
+           .should('be.visible')
+           .click()
    
 })
 
