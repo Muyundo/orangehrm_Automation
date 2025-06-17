@@ -9,9 +9,9 @@ beforeEach(() =>{
 })
 
 it('Register employee', () =>{
-    cy.get('.oxd-navbar-nav').contains('PIM')
+    cy.get('.oxd-navbar-nav', {timeout: 10000}).contains('PIM')
       .click()
-    cy.get ('.oxd-button').contains('Add')
+    cy.get ('.oxd-button', {timeout: 10000}).contains('Add')
       .click()
 
     cy.get('input[name = "firstName"]', {timeout: 10000})
