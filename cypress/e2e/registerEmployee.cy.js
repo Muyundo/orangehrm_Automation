@@ -14,7 +14,8 @@ it('Register employee', () =>{
     cy.get ('.oxd-button').contains('Add')
       .click()
 
-    cy.get('input[name = "firstName"]').type(randomInputs.fname)
+    cy.get('input[name = "firstName"]', {timeout: 10000})
+      .type(randomInputs.fname)
     cy.get('input[name = "middleName"]').type(randomInputs.mname)
     cy.get('input[name = "lastName"]').type(randomInputs.lname)
     cy.get('.oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input').type(randomNumber)
@@ -26,7 +27,7 @@ it('Register employee', () =>{
 
       })
 
-it('Check for mandatory fields',() => {
+it('Check for mandatory fields on add employee page',() => {
     cy.get('.oxd-navbar-nav').contains('PIM')
       .click()
     cy.get ('.oxd-button').contains('Add')
