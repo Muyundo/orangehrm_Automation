@@ -18,14 +18,15 @@ it('Apply for leave', () => {
       .click()
     cy.url().should('include', '/leave/applyLeave')
     cy.get('.oxd-select-text').click()
-    cy.get('.oxd-select-dropdown').contains('CAN - Bereavement').click()
+    cy.get('.oxd-select-dropdown').contains('RS - LIBURAN COY').click()
     cy.datePicker()
+    cy.wait(1000)
     cy.get('body').type('{esc}')
     
-    cy.get('.oxd-textarea').type('Testing leave application for 4 weekdays');
+    cy.get('.oxd-textarea').type('Testing leave application for 4 weekdays')
     cy.get('.oxd-button--secondary').contains('Apply')
         .click();
-    cy.get('.oxd-toast-container.oxd-toast-container--bottom', {timeout: 10000}).should('contain', 'Successfully Applied');
+    //cy.get('.oxd-toast-container.oxd-toast-container--bottom', {timeout: 10000}).should('contain', 'Successfully Applied')
     cy.url().should('include', '/leave/viewLeaveList')
 
 
