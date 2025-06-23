@@ -18,6 +18,7 @@ Cypress.Commands.add('login', () =>{
 
 Cypress.Commands.add('datePicker', () => {
   const dayjs = require('dayjs')
+  const today = dayjs();
 
   let startDate
   while (true) {
